@@ -38,3 +38,29 @@ This simpler project should still give you a good opportunity to practice arrays
 
 let computer = Math.round((Math.random())*10);
 console.log(computer);
+
+let guessInput = document.getElementById('guessedNumber');
+let submitButton = document.getElementById('submit');
+
+//The loop would start over again, we can't put a new guessed number
+submitButton.addEventListener('click',function (){
+    let guessedNumber = guessInput.value;
+    
+    let attempts = 3;
+
+    while(attempts>0){
+
+        if(guessedNumber>computer){
+            console.log("Too high");
+        }else if(guessedNumber<computer){
+            console.log("Too low");
+        }else {
+            console.log("That is correct !");
+        }
+
+        attempts--;
+    }
+
+
+
+})
