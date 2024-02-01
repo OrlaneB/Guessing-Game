@@ -44,19 +44,32 @@ console.log(computer);
 let guessInput = document.getElementById('guessedNumber');
 let submitButton = document.getElementById('submit');
 
-//The loop would start over again, we can't put a new guessed number
 submitButton.addEventListener('click',function (){
     guessedNumber = guessInput.value;
     
-    if(attemps > 0){
+    if(attempts > 1){
         if(guessedNumber>computer){
             console.log("Too high");
-        }else if(guessedNumber<computer){
+        } else if(guessedNumber<computer){
             console.log("Too low");
-        }else {
-            console.log("That is correct !");
+        } else {
+            console.log("That is correct!");
+        }
+    } else if(attempts === 1){
+        if(guessedNumber === computer){
+            console.log("That is correct!");
+        } else{
+            console.log("You lost.");
         }
     }
-
+    guessInput.value = "";
     attempts--;
 })
+
+// if guessed number equals computer
+// get rid of the input field
+// print to the screen "you won"
+// display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
+
+const gameResults = () => {
+}
