@@ -37,6 +37,8 @@ Add a scoring system based on the number of attempts taken.
 This simpler project should still give you a good opportunity to practice arrays, objects, conditionals, and loops. Feel free to modify or expand upon it as you see fit! */
 
 let computer = Math.round((Math.random())*10);
+let guessedNumber = null;
+let attempts = 3;
 console.log(computer);
 
 let guessInput = document.getElementById('guessedNumber');
@@ -44,12 +46,9 @@ let submitButton = document.getElementById('submit');
 
 //The loop would start over again, we can't put a new guessed number
 submitButton.addEventListener('click',function (){
-    let guessedNumber = guessInput.value;
+    guessedNumber = guessInput.value;
     
-    let attempts = 3;
-
-    while(attempts>0){
-
+    if(attemps > 0){
         if(guessedNumber>computer){
             console.log("Too high");
         }else if(guessedNumber<computer){
@@ -57,10 +56,7 @@ submitButton.addEventListener('click',function (){
         }else {
             console.log("That is correct !");
         }
-
-        attempts--;
     }
 
-
-
+    attempts--;
 })
