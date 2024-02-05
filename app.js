@@ -72,4 +72,6 @@ submitButton.addEventListener('click',function (){
 // display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
 
 const gameResults = () => {
+   
 }
+gameResults();
