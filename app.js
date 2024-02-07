@@ -73,7 +73,12 @@ submitButton.addEventListener('click',function (){
 // print to the screen "you won"
 // display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
 
-const gameResults = () => {
-   
+const gameResults = (isWinner) => {
+    if(isWinner){
+        console.log('You won!');
+        results.innerHTML = 'You won!';
+    } else {
+        console.log('You lost!');
+        results.innerHTML = 'You lost!';
+    }
 }
-gameResults();
