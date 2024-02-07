@@ -83,4 +83,14 @@ const gameResults = (isWinner) => {
         console.log('You lost!');
         results.innerHTML = 'You lost!';
     }
+    endOfGameScreen(isWinner);
+}
+ let body = document.getElementById("body");
+ console.log(typeof body, body);
+const endOfGameScreen = (isWinner) => {
+    guessInput.remove();
+    submitButton.remove();
+    let restartButton = document.createElement("button"); 
+    restartButton.innerHTML = "Restart the game";
+    body.appendChild(restartButton);
 }
