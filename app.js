@@ -55,15 +55,13 @@ submitButton.addEventListener('click',function (){
         } else if(guessedNumber<computer){
             results.innerHTML = 'Too low';
         } else {
-            isWinner = true;
-            gameResults(isWinner);
+            console.log("That is correct!");
         }
     } else if(attempts === 1){
-        if(Number(guessedNumber) === computer){
-            isWinner = true;
-            gameResults(isWinner);
+        if(guessedNumber === computer){
+            console.log("That is correct!");
         } else{
-            gameResults(isWinner);
+            console.log("You lost.");
         }
     }
     guessInput.value = "";
