@@ -54,11 +54,14 @@ submitButton.addEventListener('click',function (){
             console.log("Too low");
         } else {
             console.log("That is correct!");
+            gameResults();
         }
     } else if(attempts === 1){
         if(guessedNumber === computer){
             console.log("That is correct!");
+            gameResults();
         } else{
+            gameResults();
             console.log("You lost.");
         }
     }
@@ -72,6 +75,6 @@ submitButton.addEventListener('click',function (){
 // display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
 
 const gameResults = () => {
-   
+    guessInput.value = "Play again.";
+    attempts = 0;
 }
-gameResults();
