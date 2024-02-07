@@ -39,6 +39,8 @@ This simpler project should still give you a good opportunity to practice arrays
 let computer = Math.round((Math.random())*10);
 let guessedNumber = null;
 let attempts = 3;
+let isWinner = false;
+let results = document.getElementById('results');
 console.log(computer);
 
 let guessInput = document.getElementById('guessedNumber');
@@ -49,17 +51,19 @@ submitButton.addEventListener('click',function (){
     
     if(attempts > 1){
         if(guessedNumber>computer){
-            console.log("Too high");
+            results.innerHTML = 'Too high';
         } else if(guessedNumber<computer){
-            console.log("Too low");
+            results.innerHTML = 'Too low';
         } else {
-            console.log("That is correct!");
+            isWinner = true;
+            gameResults(isWinner);
         }
     } else if(attempts === 1){
-        if(guessedNumber === computer){
-            console.log("That is correct!");
+        if(Number(guessedNumber) === computer){
+            isWinner = true;
+            gameResults(isWinner);
         } else{
-            console.log("You lost.");
+            gameResults(isWinner);
         }
     }
     guessInput.value = "";
@@ -71,7 +75,12 @@ submitButton.addEventListener('click',function (){
 // print to the screen "you won"
 // display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
 
-const gameResults = () => {
-   
+const gameResults = (isWinner) => {
+    if(isWinner){
+        console.log('You won!');
+        results.innerHTML = 'You won!';
+    } else {
+        console.log('You lost!');
+        results.innerHTML = 'You lost!';
+    }
 }
-gameResults();
