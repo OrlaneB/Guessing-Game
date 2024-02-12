@@ -101,7 +101,12 @@ const endOfGameScreen = (isWinner) => {
 
 const restartTheGame = () => {
     console.log('restart');
-    guessInput.style.display="block";
-    submitButton.style.display="block";
+    guessInput.style.display="inline-block";
+    submitButton.style.display="inline-block";
     restartButton.style.display="none";
+    clearResults();
+}
+
+const clearResults = () => {
+    results.innerHTML="Guess a number";
 }
