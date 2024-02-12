@@ -45,6 +45,7 @@ console.log(computer);
 
 let guessInput = document.getElementById('guessedNumber');
 let submitButton = document.getElementById('submit');
+let restartButton = document.createElement("button"); 
 
 submitButton.addEventListener('click',function (){
     guessedNumber = guessInput.value;
@@ -56,12 +57,15 @@ submitButton.addEventListener('click',function (){
             results.innerHTML = 'Too low';
         } else {
             console.log("That is correct!");
+            gameResults(true);
         }
     } else if(attempts === 1){
-        if(guessedNumber === computer){
+        if(Number(guessedNumber) === computer){
             console.log("That is correct!");
+            gameResults(true);
         } else{
             console.log("You lost.");
+            gameResults(false);
         }
     }
     guessInput.value = "";
@@ -71,7 +75,7 @@ submitButton.addEventListener('click',function (){
 // if guessed number equals computer
 // get rid of the input field
 // print to the screen "you won"
-// display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field
+// display a button to restart the game and reinitialize attempts and guessed number, redisplay the input field, delete the button
 
 const gameResults = (isWinner) => {
     if(isWinner){
@@ -85,10 +89,19 @@ const gameResults = (isWinner) => {
 }
  let body = document.getElementById("body");
  console.log(typeof body, body);
+
 const endOfGameScreen = (isWinner) => {
-    guessInput.remove();
-    submitButton.remove();
-    let restartButton = document.createElement("button"); 
+    guessInput.style.display="none";
+    submitButton.style.display="none";
+    restartButton.style.display="block";
     restartButton.innerHTML = "Restart the game";
+    restartButton.setAttribute('onclick','restartTheGame()');
     body.appendChild(restartButton);
+}
+
+const restartTheGame = () => {
+    console.log('restart');
+    guessInput.style.display="block";
+    submitButton.style.display="block";
+    restartButton.style.display="none";
 }
