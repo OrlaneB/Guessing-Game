@@ -110,3 +110,5 @@ const restartTheGame = () => {
 const clearResults = () => {
     results.innerHTML="Guess a number";
 }
+
+//For next time : styling, check if it is a number, let the player choose the range of the game and the number of attempts, and get a different score based on that, refactor to use a loop
