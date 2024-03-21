@@ -47,6 +47,29 @@ let guessInput = document.getElementById('guessedNumber');
 let submitButton = document.getElementById('submit');
 let restartButton = document.createElement("button"); 
 
+// Setup guessing game landing page
+document.getElementById('circles').style.display = "flex";
+document.getElementById('circles').style.justifyContent = "center";
+document.getElementById('circles').style.alignItems = "center";
+
+// guessInput styles
+guessInput.style.backgroundColor = 'rgba(209,107,165, .3)';
+guessInput.style.borderRadius = '50%';
+guessInput.style.borderStyle = 'solid';
+guessInput.style.borderColor = 'rgb(165,200,255)';
+guessInput.style.height = "500px";
+guessInput.style.width = "500px";
+guessInput.style.position = "relative";
+
+// submitButton styles
+submitButton.style.backgroundColor = 'rgba(209,107,165, .3)';
+submitButton.style.borderRadius = '50%';
+submitButton.style.height = "500px";
+submitButton.style.width = "500px";
+
+// resettButton styles
+restartButton.style.display = "block";
+
 submitButton.addEventListener('click',function (){
     guessedNumber = guessInput.value;
     
