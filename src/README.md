@@ -1,0 +1,1 @@
+# The CSS reset styles apply to all "*"

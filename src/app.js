@@ -47,6 +47,12 @@ let guessInput = document.getElementById('guessedNumber');
 let submitButton = document.getElementById('submit');
 let restartButton = document.createElement("button"); 
 
+// UP NEXT //ALWAYS DO GIT PULL BEFORE STARTING ESPECIALLY IF SOMEONE ELSE MADE CHANGES TO THIS BRANCH - CREATE FEATURE BRANCH AND DONT MERGE UNTIL ORLANE LOOKS
+
+// Next I want to create spacing around the circles and maybe a floating animation on hove
+//style the results paragraph and add a message for each result - for example if the guess is too low I want the element to fade in from the bottom or something directional, 
+//then i need to create a response when there is a winner or no more turns left - right now after you click the circle 3 times or there is a winner the circles go away
+
 // Setup guessing game landing page
 document.getElementById('circles').style.display = "flex";
 document.getElementById('circles').style.justifyContent = "center";
@@ -59,7 +65,6 @@ guessInput.style.borderStyle = 'solid';
 guessInput.style.borderColor = 'rgb(165,200,255)';
 guessInput.style.height = "500px";
 guessInput.style.width = "500px";
-guessInput.style.position = "relative";
 
 // submitButton styles
 submitButton.style.backgroundColor = 'rgba(209,107,165, .3)';
