@@ -50,10 +50,24 @@ let restartButton = document.createElement("button");
 // Setup guessing game landing page
 
 // guessInput styles
-guessInput.style.backgroundColor = 'gray';
+guessInput.style.backgroundColor = 'rgba(209,107,165, .3)';
+guessInput.style.borderRadius = '50%';
+guessInput.style.borderWidth = '10px';
+guessInput.style.borderStyle = 'solid';
+guessInput.style.borderColor = 'rgb(165,200,255)';
+guessInput.style.height = "500px";
+guessInput.style.width = "500px";
+guessInput.style.position = "relative";
+document.getElementById('input-div').style.display = "flex";
+document.getElementById('input-div').style.justifyContent = "center";
+document.getElementById('input-div').style.alignItems = "center";
 
-// submitButton
 
+// submitButton styles
+submitButton.style.display = "block";
+
+// resettButton styles
+restartButton.style.display = "block";
 
 submitButton.addEventListener('click',function (){
     guessedNumber = guessInput.value;
