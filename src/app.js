@@ -47,6 +47,14 @@ let guessInput = document.getElementById('guessedNumber');
 let submitButton = document.getElementById('submit');
 let restartButton = document.createElement("button"); 
 
+// Setup guessing game landing page
+
+// guessInput styles
+guessInput.style.backgroundColor = 'gray';
+
+// submitButton
+
+
 submitButton.addEventListener('click',function (){
     guessedNumber = guessInput.value;
     
